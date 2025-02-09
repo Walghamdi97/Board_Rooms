@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct Board_RoomsApp: App {
+    @StateObject private var loginViewModel = LoginViewModel()
     var body: some Scene {
+        
         WindowGroup {
-            ContentView()
+            SignInView().environmentObject(loginViewModel)
         }
     }
 }
